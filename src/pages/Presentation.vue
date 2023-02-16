@@ -28,6 +28,18 @@
                 </parallax>
             </h6>
         </div>
+
+
+      <parallax>
+
+        <n-button type="primary" round>
+          <nav-link to="/components">
+            <i class="now-ui-icons"></i> Acessar
+          </nav-link>
+        </n-button>
+
+      </parallax>
+
         <div class="section section-components" data-background-color="dark-red">
             <div class="container">
                 <div class="row">

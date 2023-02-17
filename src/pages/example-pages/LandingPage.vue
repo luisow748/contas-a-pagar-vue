@@ -284,8 +284,9 @@
 </template>
 <script>
   import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components';
-  import api from "@/api";
+  import AccountApi from '@/AccountApi'
   export default {
+
     name: 'landing-page',
     bodyClass: 'landing-page',
     components: {
@@ -305,20 +306,14 @@
         accounts: [],
       }
     },
-    created() {
-      this.getAccounts();
+    mounted() {
+      AccountApi.getAccounts().then(
+          (acc) => {
+            this.accounts = acc
+          }
+      )
     },
-    methods: {
-      getAccounts(){
-        api.get("/account")
-            .then( (res) => {
-              this.accounts = res.data
-            })
-            .catch( (err) => {
-              console.log(err)
-            });
-      }
-    }
+    methods: {}
   }
 </script>
 <style>

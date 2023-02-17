@@ -17,17 +17,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto text-center">
-                            <h4 class="description">To get started, you will need to choose a plan for your needs. You
-                                have Free Unlimited Updates and Premium Support on each package.</h4>
+                            <h4 class="description">Contas por mês:</h4>
                             <div class="section-space"></div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
                             <card type="pricing" plain>
-                                <h6 class="category">Starter</h6>
+                                <h6 class="category">Janeiro</h6>
                                 <div class="icon icon-info">
-                                    <i class="now-ui-icons business_briefcase-24"></i>
+<!--                                    <i class="now-ui-icons business_briefcase-24"></i>-->
                                 </div>
                                 <h3 class="card-title">
                                     <small>$</small>
@@ -42,10 +41,10 @@
                             </card>
                         </div>
                         <div class="col-md-4">
-                            <card type="pricing" color="black">
-                                <h6 class="category">Professional</h6>
+                            <card type="pricing" plain>
+                                <h6 class="category">Fevereiro</h6>
                                 <div class="icon icon-success">
-                                    <i class="now-ui-icons tech_headphones"></i>
+<!--                                    <i class="now-ui-icons tech_headphones"></i>-->
                                 </div>
                                 <h3 class="card-title">
                                     <small>$</small>
@@ -63,9 +62,9 @@
                         </div>
                         <div class="col-md-4">
                             <card type="pricing" plain>
-                                <h6 class="category">Basic</h6>
+                                <h6 class="category">Março</h6>
                                 <div class="icon icon-danger">
-                                    <i class="now-ui-icons design_palette"></i>
+<!--                                    <i class="now-ui-icons design_palette"></i>-->
                                 </div>
                                 <h3 class="card-title">
                                     <small>$</small>

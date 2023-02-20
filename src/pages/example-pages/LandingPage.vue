@@ -30,6 +30,11 @@
 
                       </div>
 
+                      <div v-for="reg in registers" v-bind:key="reg.id">
+                        {{reg.id}} - {{reg.description}} - Account ID {{reg.accountId}}
+
+                      </div>
+
                         <h5 class="description"> {{ }}</h5>
                     </div>
                 </div>
@@ -284,7 +289,8 @@
 </template>
 <script>
   import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components';
-  import AccountApi from '@/AccountApi'
+  import AccountApi from '@/api/AccountApi'
+  import RegisterApi from '@/api/RegisterApi'
   export default {
 
     name: 'landing-page',
@@ -304,6 +310,7 @@
           message: ''
         },
         accounts: [],
+        registers: [],
       }
     },
     mounted() {
@@ -312,6 +319,12 @@
             this.accounts = acc
           }
       )
+      RegisterApi.getRegisters().then(
+          (acc) => {
+            this.registers = acc
+          }
+      )
+      console.log(this.registers)
     },
     methods: {}
   }

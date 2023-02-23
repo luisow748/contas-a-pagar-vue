@@ -9,7 +9,8 @@ import BlogPost from "./pages/example-pages/BlogPost.vue";
 import BlogPosts from "./pages/example-pages/BlogPosts.vue";
 import ContactUs from "./pages/example-pages/ContactUs.vue";
 import LandingPage from "./pages/example-pages/LandingPage.vue";
-import NewAccountPage from "./pages/example-pages/NewAccount.vue";
+import NewAccountPage from "./pages/account/NewAccount.vue";
+import Accounts from "@/pages/account/Accounts.vue";
 import LoginPage from "./pages/example-pages/LoginPage.vue";
 import PricingPage from "./pages/example-pages/PricingPage.vue";
 import EcommercePage from "./pages/example-pages/EcommercePage.vue";
@@ -69,6 +70,12 @@ const router = new Router({
       path: "/newaccount",
       name: "newaccount",
       components: {default: NewAccountPage, header: MainNavbar, footer: MainFooter},
+      props: {footer: {type: 'default'}, header: {colorOnScroll: 450}}
+    },
+    {
+      path: "/account",
+      name: "account",
+      components: {default: Accounts, header: MainNavbar, footer: MainFooter},
       props: {footer: {type: 'default'}, header: {colorOnScroll: 450}}
     },
     {

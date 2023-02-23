@@ -6,32 +6,31 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="https://www.creative-tim.com">
-                            Creative Tim
+                        <a href="/#/index">
+                            Contas a pagar
                         </a>
                     </li>
                     <li>
-                        <a href="https:///presentation.creative-tim.com">
-                            About Us
+                        <a href="/#/about">
+                            Sobre
                         </a>
                     </li>
-                    <li>
-                        <a href="https:///blog.creative-tim.com">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/license">
-                            License
-                        </a>
-                    </li>
+<!--                    <li>-->
+<!--                        <a href="https:///blog.creative-tim.com">-->
+<!--                            Blog-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="https://www.creative-tim.com/license">-->
+<!--                            License-->
+<!--                        </a>-->
+<!--                    </li>-->
                 </ul>
             </nav>
             <div class="copyright">
                 &copy; {{year}}, Designed by
-                <a href="https:///www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                <a href="https://github.com/cristijora" target="_blank">Cristi Jora</a> and
-                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                <a href="#" target="_blank">748</a>. Coded by
+                <a href="@" target="_blank">Luís Porto</a>.
             </div>
         </div>
     </footer>

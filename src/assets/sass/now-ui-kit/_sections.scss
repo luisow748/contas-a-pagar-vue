@@ -19,7 +19,7 @@
 }
 
 .page-header{
-  min-height: 100vh;
+  min-height: 40vh;
   max-height: 999px;
   padding: 0;
   color: $white-color;
@@ -33,7 +33,7 @@
   }
 
   &.page-header-small{
-      min-height: 60vh;
+      min-height: 10vh;
       max-height: 440px;
   }
 

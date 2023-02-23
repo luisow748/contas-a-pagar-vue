@@ -5,7 +5,7 @@
             menu-classes="ml-auto">
         <template slot-scope="{toggle, isToggled}">
                 <router-link v-popover:popover1 class="navbar-brand" to="/presentation">
-                    Now Ui Kit Pro
+                    Contas a pagar
                 </router-link>
                 <el-popover
                         ref="popover1"
@@ -16,18 +16,21 @@
                     <div class="popover-body">Designed by Invision. Coded by Creative Tim</div>
                 </el-popover>
         </template>
+
         <template slot="navbar-menu">
-            <drop-down tag="li" title="Components" icon="now-ui-icons design_app" class="nav-item">
-                <nav-link to="/components">
-                    <i class="now-ui-icons business_chart-pie-36"></i> Components
+            <drop-down tag="li" title="Contas" icon="now-ui-icons design_app" class="nav-item">
+                <nav-link to="/newaccount">
+                    <i class="now-ui-icons business_chart-pie-36"></i> Criar nova conta
                 </nav-link>
-                <a href="https://demos.creative-tim.com/vue-now-ui-kit-pro/documentation" target="_blank" class="dropdown-item">
-                    <i class="now-ui-icons design_bullet-list-67"></i> Documentation
-                </a>
+              <nav-link to="/account">
+<!--                <a href="https://demos.creative-tim.com/vue-now-ui-kit-pro/documentation" target="_blank" class="dropdown-item">-->
+                    <i class="now-ui-icons design_bullet-list-67"></i> Listar todas
+<!--                </a>-->
+              </nav-link>
             </drop-down>
             <drop-down tag="li" title="sections" icon="now-ui-icons files_paper" class="nav-item">
-                <nav-link class="dropdown-item" to="/sections#headers">
-                    <i class="now-ui-icons shopping_box"></i> Headers
+                <nav-link class="dropdown-item" to="/account">
+                    <i class="now-ui-icons shopping_box"></i> Listar todas
                 </nav-link>
                 <nav-link class="dropdown-item" to="/sections#features">
                     <i class="now-ui-icons ui-2_settings-90"></i> Features

@@ -2,7 +2,7 @@
 .index-page,
 .presentation-page{
     .page-header{
-        height: 125vh;
+        height: 25vh;
 
         .container{
             > .content-center{
@@ -43,7 +43,7 @@
             width: 100%;
             border-radius: $border-radius-small;
             transition: all .2s $transition-ease;
-            box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
 
             &:hover{
                 @include transform-scale(1.02);
@@ -185,7 +185,7 @@
 .landing-page{
 
     .page-header{
-        height: 100vh;
+        height: 25vh;
         position: relative;
 
         .share{
@@ -255,7 +255,7 @@
         border-radius: 50%;
         overflow: hidden;
         margin: 0 auto;
-        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);
     }
 
     .title{
@@ -288,7 +288,7 @@
             max-width: 150px;
             width: 145px;
             text-align: center;
-            margin: 15px 0 0px;
+            margin: 15px 0 0;
 
             h2{
                 margin-bottom: 5px;
@@ -383,7 +383,7 @@
     .card-signup{
         max-width: 100%;
         margin-bottom: 130px;
-        padding: 15px 0px;
+        padding: 15px 0;
 
         &:not([data-background-color]) .card-title{
             color: initial;
@@ -397,7 +397,7 @@
     }
 
     .info-horizontal{
-        padding: 0px 0px 20px;
+        padding: 0 0 20px;
     }
     .social{
         .btn{
@@ -481,7 +481,7 @@
     }
     .info{
         padding-bottom: 10px;
-        padding-top: 0px;
+        padding-top: 0;
         .title{
             margin: 25px 0 10px;
         }
@@ -492,7 +492,7 @@
 .blog-post{
     .section-blog-info{
         padding-top: 30px;
-        padding-bottom: 0px;
+        padding-bottom: 0;
 
         .btn{
             margin-top: 0;
@@ -537,7 +537,7 @@
         }
     }
     .about-description{
-        padding: 70px 0px 0px 0px;
+        padding: 70px 0 0 0;
     }
     .about-services{
         padding-top: 10px;
@@ -547,13 +547,13 @@
             margin-bottom: 70px;
         }
         img{
-            margin: 20px 0px;
+            margin: 20px 0;
         }
     }
 
     .about-contact,
     .about-office{
-        padding: 80px 0px;
+        padding: 80px 0;
         .description{
             margin-bottom: 70px;
         }

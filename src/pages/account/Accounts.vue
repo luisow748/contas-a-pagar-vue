@@ -25,10 +25,10 @@
       <div class="container">
         <h3 class="title">Registros:</h3>
 
-<!--        <div v-for="acc in accounts" v-bind:key="acc.id">-->
-<!--          {{ acc.id }} - {{ acc.name }} - Account ID: {{ acc.totalValue }}-->
-<!--          Conta criada: Nº {{ acc.id }} - Nome: {{ acc.name }}-->
-<!--        </div>-->
+        <!--        <div v-for="acc in accounts" v-bind:key="acc.id">-->
+        <!--          {{ acc.id }} - {{ acc.name }} - Account ID: {{ acc.totalValue }}-->
+        <!--          Conta criada: Nº {{ acc.id }} - Nome: {{ acc.name }}-->
+        <!--        </div>-->
 
         <table class="table table-striped border">
           <thead>
@@ -37,14 +37,21 @@
             <th scope="col">Nome</th>
             <th scope="col">Valor total</th>
             <th scope="col">Vencimento</th>
+            <th scope="col">Ações</th>
           </tr>
           </thead>
           <tbody>
           <tr v-for="acc in accounts" :key="acc.id">
-            <th scope="row">{{acc.id}}</th>
-            <td>{{acc.name}}</td>
-            <td>{{acc.totalValue}}</td>
-            <td>{{acc.expirationDate}}</td>
+            <th scope="row">{{ acc.id }}</th>
+            <td v-if="acc.name"></td>
+            <td v-else>Conta nº {{ acc.id }}</td>
+            <td>{{ acc.totalValue }}</td>
+            <td>{{ formatDate(acc.expirationDate) }}</td>
+            <td>
+              <n-button type="danger" size="sm" @click.native="deleteAccount(acc.id)">
+                <i class="now-ui-icons ui-1_simple-delete"></i>
+              </n-button>
+            </td>
           </tr>
 
           </tbody>
@@ -59,14 +66,19 @@
 </template>
 <script>
 import {Button, Card, FormGroupInput, TabPane, Tabs} from '@/components';
-import AccountApi from '@/api/AccountApi'
+import AccountApi from '@/base/api/account-api'
 import {Option, Select} from 'element-ui';
+import DateService from '@/base/services/date-service'
+import NavLink from "@/components/Navbar/NavLink.vue";
+import NButton from "@/components/Button.vue";
 
 export default {
 
   name: 'newaccount',
   bodyClass: 'landing-page',
   components: {
+    NButton,
+    NavLink,
     Card,
     Tabs,
     TabPane,
@@ -74,6 +86,7 @@ export default {
     [FormGroupInput.name]: FormGroupInput,
     [Select.name]: Select,
     [Option.name]: Option,
+    DateService
   },
   data() {
     return {
@@ -85,17 +98,28 @@ export default {
       },
       accounts: [],
       register: {},
-      fields: ['ID', 'Nome', 'Valor total', 'Vencimento'],
+
     }
   },
   mounted() {
-    AccountApi.getAccounts().then(
-        (acc) => {
-          this.accounts = acc
-        }
-    )
+    this.refreshAccountList()
   },
-  methods: {}
+  methods: {
+    refreshAccountList() {
+      AccountApi.getAccounts().then(
+          (acc) => {
+            this.accounts = acc
+          }
+      )
+    },
+    formatDate(date) {
+      return DateService.formatDate(date)
+    },
+    deleteAccount(id) {
+      AccountApi.deleteRegister(id)
+          .finally(() => this.refreshAccountList())
+    }
+  }
 }
 </script>
 <style>

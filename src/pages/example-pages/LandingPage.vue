@@ -289,8 +289,8 @@
 </template>
 <script>
   import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components';
-  import AccountApi from '@/api/AccountApi'
-  import RegisterApi from '@/api/RegisterApi'
+  import AccountApi from '@/base/api/account-api'
+  import RegisterApi from '@/base/api/register-api'
   export default {
 
     name: 'landing-page',

@@ -24,5 +24,12 @@ export default {
             .then((res) => {
                 return res.data
             });
+    },
+    deleteRegister(id) {
+        return accountApi.delete(accountApiName + "/" + id)
+            .then((res) => {
+                return res.data
+            });
     }
+
 }

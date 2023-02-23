@@ -77,7 +77,7 @@
 </template>
 <script>
 import {Button, Card, FormGroupInput, TabPane, Tabs} from '@/components';
-import AccountApi from '@/api/AccountApi'
+import AccountApi from '@/base/api/account-api'
 import {Option, Select} from 'element-ui';
 import FgInput from "@/components/Inputs/formGroupInput.vue";
 
